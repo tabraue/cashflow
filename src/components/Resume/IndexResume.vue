@@ -1,28 +1,49 @@
 <template>
   <main>
-    <p>{{ label }}</p>
-    <h1>{{ amountVisual }}</h1>
+    <p>{{ labelView }}</p>
+    <h1>{{ amountCurrency }}</h1>
+    <div class="graphic">
+      <slot name="graphic"></slot>
+    </div>
+    <div class="action">
+      <slot name="action"></slot>
+    </div>
   </main>
 </template>
 
 <script>
+const currencyFormater = new Intl.NumberFormat("es-SP", {
+  style: "currency",
+  currency: "EUR"
+})
 export default {
-    props: {
-        label: {
-            type: String,
-        },
-        totalAmount: {
-            type: Number,
-        },
-        amount: {
-            type: Number,
-        },
+  props: {
+    label: {
+      type: String,
+      default: "Ahorro total",
     },
-    computed:{
-        amountVisual:{ 
-            
-        }
+    date: {
+      type: Date,
+    },
+    totalAmount: {
+      type: Number,
+    },
+    amount: {
+      type: Number,
+      default: null,
+    },
+  },
+  computed: {
+    amountVisual() {
+      return this.amount !== null ? this.amount : this.totalAmount;
+    },
+    labelView() {
+      return this.label !== null ? this.label : this.date
+    },
+    amountCurrency() {
+      return currencyFormater.format(this.amountVisual)
     }
+  },
 };
 </script>
 
