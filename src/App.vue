@@ -11,23 +11,32 @@ export default defineComponent({
 </script> -->
 
 <template>
-  <SplashScreen/>
+  <Suspense>
+    <template #default>
+      <HomeMain />
+    </template>
+    <template #fallback>
+      <SplashScreen />
+    </template>
+  </Suspense>
 </template>
 
 <script>
-import SplashScreen from './components/SplashScreen.vue';
+import SplashScreen from "./components/SplashScreen.vue";
+import { defineAsyncComponent } from "vue";
 
-
-export default{
+export default {
   components: {
     SplashScreen,
-  }
-}
-
-
+    HomeMain: defineAsyncComponent(() => {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(import("./components/HomeMain.vue"));
+        }, 2500);
+      });
+    }),
+  },
+};
 </script>
 
-
-<style scoped>
-
-</style>
+<style scoped></style>

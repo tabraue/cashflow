@@ -3,7 +3,7 @@
         <img src="src\assets\logo.svg" alt="Logo Cash Flow"/>
         <h1>
             
-            <span>Splash</span>Screen
+            <span>Cash</span>Flow
         </h1>
     </div>
 </template>
