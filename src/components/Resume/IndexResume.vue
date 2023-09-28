@@ -12,10 +12,8 @@
 </template>
 
 <script>
-const currencyFormater = new Intl.NumberFormat("es-SP", {
-  style: "currency",
-  currency: "EUR"
-})
+import { currencyFormater } from '../../functions/functions';
+
 export default {
   props: {
     label: {

@@ -48,6 +48,8 @@ const showMovements = ref(false);
   background-color: white;
   box-shadow: 0 -8px 16px #e5e5e5;
   border-radius: 24px;
+}
+.grip{
   cursor: pointer;
 }
 .movements .head {

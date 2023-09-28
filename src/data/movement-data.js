@@ -9,13 +9,13 @@ export const fakedata = [
     id: 1,
     title: "Cumpleaños 1",
     description: "Extra para pagar ropa",
-    amount: 200,
+    amount: -200,
   },
   {
     id: 2,
     title: "Cumpleaños 2",
     description: "Extra para pagar ropa",
-    amount: 200,
+    amount: -200,
   },
   {
     id: 3,
@@ -51,7 +51,7 @@ export const fakedata = [
     id: 8,
     title: "Cumpleaños 8",
     description: "Extra para pagar ropa",
-    amount: 200,
+    amount: -200,
   },
   {
     id: 9,
