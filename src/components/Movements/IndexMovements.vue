@@ -2,20 +2,21 @@
   <div class="movements">
     <h2 class="title">Historial</h2>
     <div class="content">
-      <div v-for="movement in movements" :key="movement.id">
-        {{ movement.title }}
-      </div>
+      <SingleMovement v-for="movement in movements" :key="movement.id" :movement="movement"/>
     </div>
   </div>
 </template>
 
 <script setup>
 import { toRefs, defineProps } from "vue";
+import SingleMovement from "./SingleMovement.vue";
 
 const props = defineProps({
   movements: {
     type: Array,
-    default: () => [], // se realiza arrow func por reactividad
+    default: () => [], 
+    // se realiza arrow func para generar reactividad, 
+    // y como default valor [] en caso de no existir valor desde el parent.
   },
 });
 

@@ -1,6 +1,6 @@
 <template>
     <div class="splashscreen">
-        <img src="src\assets\logo.svg" alt="Logo Cash Flow"/>
+        <img src="../assets/icons/logo.svg" alt="Logo Cash Flow"/>
         <h1>
             
             <span>Cash</span>Flow

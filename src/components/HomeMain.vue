@@ -15,10 +15,7 @@
       </Resume>
     </template>
     <template #movements>
-      <Movements
-      :movements="movements"
-      >
-      </Movements>
+      <Movements :movements="movements"></Movements>
     </template>
   </LayoutMainVue>
 </template>
@@ -28,7 +25,7 @@ import LayoutMainVue from "./LayoutMain.vue";
 import HeaderMain from "./HeaderMain.vue";
 import Resume from "./Resume/IndexResume.vue";
 import Movements from "./Movements/IndexMovements.vue";
-import {fakedata} from '../data/movement-data'
+import { fakedata } from "../data/movement-data";
 
 export default {
   components: {
@@ -41,7 +38,7 @@ export default {
     return {
       amount: null,
       label: "Ahorro total",
-      movements: fakedata
+      movements: fakedata, // movements es la variable local que contiene fakedata => :movements es un prop que usa movements variable local
     };
   },
 };
