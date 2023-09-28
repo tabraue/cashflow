@@ -11,6 +11,7 @@
         :amount="amount"
       >
         <template #graphic> graphic </template>
+
         <template #action>
           <Action/>
         </template>
@@ -26,7 +27,7 @@
 import LayoutMainVue from "./LayoutMain.vue";
 import HeaderMain from "./HeaderMain.vue";
 import Resume from "./Resume/IndexResume.vue";
-import Action from "./ActionMain.vue"
+import Action from "./ActionMain.vue";
 import Movements from "./Movements/IndexMovements.vue";
 import { fakedata } from "../data/movement-data";
 

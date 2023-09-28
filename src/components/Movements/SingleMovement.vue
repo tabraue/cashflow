@@ -33,6 +33,7 @@ const props = defineProps({
         type: Object,
     },
 });
+
 </script>
 
 <style scoped>

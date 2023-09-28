@@ -2,7 +2,7 @@
     <button @click="showModal = !showModal">Agregar movimiento</button>
     <Teleport to="#app">
         <Modal v-show="showModal" @close="close">
-            -Formulario-
+            <FormMoves @submit="submit"/>
         </Modal>
     </Teleport>
 </template>
@@ -10,10 +10,15 @@
 <script setup>
 import { ref } from "vue";
 import Modal from "./ModalForm.vue";
+import FormMoves from "./FormMovements.vue"
 
 const showModal = ref(false)
 
 const close = () => showModal.value = false
+
+const submit = () => {
+    
+}
 
 </script>
 

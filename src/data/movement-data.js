@@ -1,7 +1,7 @@
 export const fakedata = [
 {
     id: 0,
-    title: "Cumpleaños 110",
+    title: "Cumpleaños 0",
     description: "Extra para pagar ropa",
     amount: 200,
   },
