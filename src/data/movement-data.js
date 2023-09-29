@@ -1,11 +1,13 @@
-export const fakedata = [
-{
+import { reactive } from "vue";
+
+export const fakedata = reactive([
+  {
     id: 0,
     title: "Cumpleaños 0",
     description: "Extra para pagar ropa",
     amount: 200,
   },
-  {
+/*   {
     id: 1,
     title: "Cumpleaños 1",
     description: "Extra para pagar ropa",
@@ -46,7 +48,7 @@ export const fakedata = [
     title: "Cumpleaños 7",
     description: "Extra para pagar ropa",
     amount: 200,
-  },
+  }, */
   {
     id: 8,
     title: "Cumpleaños 8",
@@ -61,4 +63,4 @@ export const fakedata = [
   },
 
 
-]
+])

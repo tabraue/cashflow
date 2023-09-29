@@ -28,7 +28,6 @@ const { movements } = toRefs(props);
 
 const remove = (id) => {
   console.log("remove", id)
-  
 }
 
 </script>

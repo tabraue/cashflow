@@ -24,12 +24,17 @@
 </template>
 
 <script>
+import { ref, reactive } from "vue";
 import LayoutMainVue from "./LayoutMain.vue";
 import HeaderMain from "./HeaderMain.vue";
 import Resume from "./Resume/IndexResume.vue";
 import Action from "./ActionMain.vue";
 import Movements from "./Movements/IndexMovements.vue";
 import { fakedata } from "../data/movement-data";
+
+/* const data = reactive({
+  fakedata: [...fakedata],
+}); */
 
 export default {
   components: {
@@ -39,13 +44,24 @@ export default {
     Action,
     Movements,
   },
-  data() {
+  setup() {
+    const movements = ref(fakedata)
+    const amount = null
+    const label = "Ahorro total"
+
+    return{
+      amount, 
+      label,
+      movements
+    }
+  }
+/*   data() {
     return {
       amount: null,
       label: "Ahorro total",
       movements: fakedata, // movements es la variable local que contiene fakedata => :movements es un prop que usa movements variable local
     };
-  },
+  }, */
 };
 </script>
 

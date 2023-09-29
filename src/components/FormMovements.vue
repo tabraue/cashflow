@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="submit">
+  <form @submit.prevent="submit()">
     <div class="field">
       <label for="title">Título</label>
       <input type="text" v-model="title" />
@@ -18,32 +18,54 @@
         <span>Ingreso</span>
       </label>
       <label for="movement" class="radio-label">
-        <input type="radio" v-model="movementType" value="Output" />
+        <input type="radio" v-model="movementType" value="Expense" />
         <span>Gasto</span>
       </label>
     </div>
     <div class="action">
-        <button>Añadir</button>
+      <button>Añadir</button>
     </div>
   </form>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
+import { fakedata } from "../data/movement-data";
 
-const emit = defineEmits("submit")
+const emit = defineEmits(["submit"]);
 
 const submit = () => {
-    
-    emit("submit")
-}
+  let lastId = getLastId();
+  const newMove = {
+    id: lastId + 1,
+    title: title.value,
+    amount: amount.value,
+    description: description.value,
+    movementType: movementType.value,
+  };
 
-const title = ref('')
-const amount = ref('')
-const description = ref('')
-const movementType = ref('')
+  //fakedata.push(newMove);
 
+  emit("submit", newMove);
+  inputCleaner();
+};
 
+const getLastId = () => {
+  const lastEl = fakedata[fakedata.length - 1];
+  return lastEl ? lastEl.id : 0;
+};
+
+const inputCleaner = () => {
+  title.value = "";
+  amount.value = 0;
+  description.value = "";
+  movementType.value = "Income";
+};
+
+const title = ref("");
+const amount = ref(0);
+const description = ref("");
+const movementType = ref("Income");
 </script>
 
 <style scoped>
@@ -92,8 +114,8 @@ input[type="number"] {
   text-align: right;
 }
 
-input[type="radio"]{
-    cursor: pointer;
+input[type="radio"] {
+  cursor: pointer;
 }
 
 .radio-label {
