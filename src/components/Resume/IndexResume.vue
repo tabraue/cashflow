@@ -50,8 +50,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   flex-direction: column;
+  width: 100%;
 }
 
 h1,
@@ -59,10 +59,12 @@ p {
   margin: 0;
   text-align: center;
 }
+
 h1 {
   margin-top: 14px;
   color: var(--green);
 }
+
 .graphic {
   display: flex;
   justify-content: center;

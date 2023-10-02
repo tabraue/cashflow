@@ -92,7 +92,7 @@ form .action {
 
 .field {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
   padding: 16px 24px;
 }
@@ -114,10 +114,6 @@ input[type="number"] {
   text-align: right;
 }
 
-input[type="radio"] {
-  cursor: pointer;
-}
-
 .radio-label {
   display: flex;
   align-items: center;
@@ -136,6 +132,7 @@ input[type="radio"] {
   color: var(--darkblue);
   border: 2px solid var(--darkblue);
   border-radius: 50%;
+  cursor: pointer;
 }
 
 input[type="radio"]:checked {

@@ -1,4 +1,4 @@
-import { reactive } from "vue";
+import { reactive, toRef } from "vue";
 
 export const fakedata = reactive([
   {
@@ -64,3 +64,6 @@ export const fakedata = reactive([
 
 
 ])
+
+
+export const amounts = toRef([100,200,300,400,-500,-100])
