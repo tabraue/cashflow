@@ -21,7 +21,6 @@ const close = () => showModal.value = false
 
 const submit = (move) => {
     fakedata.push(move)
-    //console.log(fakedata)
     showModal.value = !showModal.value
 }
 
@@ -41,59 +40,5 @@ button {
     cursor: pointer;
 }
 
-form {
-    font-size: 1.24rem;
-    width: 100%;
-}
 
-form .action {
-    padding: 0 24px;
-}
-
-.field {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: 16px 24px;
-}
-
-label {
-    margin-bottom: 8px;
-}
-
-input,
-textarea {
-    font-size: 1.24rem;
-    border: 2px solid var(--darkblue);
-    border-radius: 8px;
-    padding: 8px;
-}
-
-input[type="number"] {
-    text-align: right;
-}
-
-.radio-label {
-    display: flex;
-    align-items: center;
-    margin-top: 8px;
-}
-
-.radio-label span {
-    margin-top: 4px;
-    margin-left: 8px;
-}
-
-input[type="radio"] {
-    appearance: none;
-    width: 1.24rem;
-    height: 1.24rem;
-    color: var(--darkblue);
-    border: 2px solid var(--darkblue);
-    border-radius: 50%;
-}
-
-input[type="radio"]:checked {
-    background-color: var(--darkblue);
-}
 </style>

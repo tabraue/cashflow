@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import { ref, reactive } from "vue";
+import { ref } from "vue";
 import LayoutMainVue from "./LayoutMain.vue";
 import HeaderMain from "./HeaderMain.vue";
 import Resume from "./Resume/IndexResume.vue";
